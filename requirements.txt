@@ -3,3 +3,4 @@
 ConfigUpdater == 2.0
 praw == 7.2.0
 requests == 2.25.1
+pyinstaller == 4.2
