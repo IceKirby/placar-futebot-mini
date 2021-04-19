@@ -19,7 +19,7 @@ match = None
 attempt_count = 10
 
 def start_up():
-    print("Iniciando Placar-Futebot-Mini...")
+    print("Iniciando Placar Futebot Mini...")
 
     global match
     if store["simplified_data"] == "True":
