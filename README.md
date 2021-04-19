@@ -19,10 +19,8 @@ Estas instruções só precisam ser executadas uma vez.
 #### Preparando para uma partida
 
 - Acesse a página da [Agenda GE](https://globoesporte.globo.com/agenda/#/todos) e encontre o jogo que você quer rodar com o Placar Futebot.
-- Abra `config.ini` em um editor de texto e preencha os campos de `data`, `hora`, `competicao`, `mandante` e `visitante` conforme listados no GE.
- - É extremamente importante que os nomes dos times e competição sejam preenchidos exatamente como no GE, ou o bot não conseguirá localizar a partida.
-- **[Opcional]** Acesse o site [365scores.com](https://www.365scores.com) e encontre o jogo que você quer acompanhar. Copie os nomes dos times para os campo `mandante_stat` e `visitante_stat`.
- - Estes campos são usados para estatísticas pós-jogo. Nomes dos times podem diferir entre GE e 365scores, então preencha com atenção.
+- Abra `config.ini` em um editor de texto e preencha os campos de `data`, `hora`, `competicao`, `mandante` e `visitante` conforme listados no GE. **Importante:** Os nomes dos times e competição devem ser preenchidos exatamente como no GE, ou o bot não conseguirá identificar a partida.
+- **[Opcional]** Acesse o site [365scores.com](https://www.365scores.com) e encontre o jogo que você quer acompanhar. Copie os nomes dos times para os campo `mandante_stat` e `visitante_stat`. Estes campos são usados para estatísticas pós-jogo, e os nomes dos times podem diferir entre GE e 365scores, então preencha com atenção.
 - Execute o programa Placar-Futebot-Mini e deixe-o rodando até o término do jogo. É possível deixar o programa rodando com antecedência, permitindo acompanhar uma partida mesmo quando você estiver indisponível.
 
 Estas instruções precisam ser executadas para cada partida que você quiser acompanhar.
