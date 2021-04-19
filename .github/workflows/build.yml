@@ -41,6 +41,11 @@ jobs:
             CMD_BUILD: pyinstaller -F -c -n Placar-Futebot-Mini -i resources/futebot.icns Main.py && cp "config-sample.ini" "dist/config.ini" && cp "praw-sample.ini" "dist/praw.ini" && cd dist && zip -r9 Placar-Futebot-Mini-Mac .
             OUT_FILE_NAME: Placar-Futebot-Mini-Mac.zip
             ASSET_MIME: application/zip
+          - os: ubuntu-16.04
+            TARGET: linux
+            CMD_BUILD: pyinstaller -F -n Placar-Futebot-Mini Main.py && cp "config-sample.ini" "dist/config.ini" && cp "praw-sample.ini" "dist/praw.ini" && cd dist && zip -r -9 Placar-Futebot-Mini-Linux *
+            OUT_FILE_NAME: Placar-Futebot-Mini-Linux.zip
+            ASSET_MIME: application/zip
           - os: windows-latest
             TARGET: windows
             CMD_BUILD: |
