@@ -111,12 +111,15 @@ def create_thread():
 # Update Match Data and print content to Match Thread
 def update_match_thread(match):
     print("Atualizando conteúdo da Match Thread")
+    global attempt_count
     try:
         match.update_data(store["match_url"])
         run_text_match(match)
     except requests.exceptions.RequestException as err:
         print("Request Error when trying to update Match Data: " + str(err))
-        global attempt_count
+        attempt_count = attempt_count - 1
+    except praw.exceptions.ResponseException as err:
+        print("Response Error when trying to update Match Data: " + str(err))
         attempt_count = attempt_count - 1
 
 # Try to find GE Match URL from the GE Agenda page

@@ -19,7 +19,9 @@ class Match:
             url = self.url
         self.url = url
         
-        response = requests.get(Match.base_url + url, timeout=10)
+        target_url = self.url.replace("ge.globo.com/", "ge.globo.com/globo/raw/");
+        
+        response = requests.get(target_url, timeout=10)
         response.raise_for_status()
         self.data = response.json()
         
